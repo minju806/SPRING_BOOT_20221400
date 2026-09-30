@@ -8,3 +8,6 @@
 
 4주차 - 데이터베이스 수정 완료
 [testdb.html : 실행/수정 완료](https://github.com/minju806/SPRING_BOOT_20221400/blob/main/demo/src/main/resources/templates/testdb.html)
+
+5주차 - 로그인/로그아웃, 암호화 완료
+[SecurityConfig.java : 실행/수정 완료](https://github.com/minju806/SPRING_BOOT_20221400/blob/main/demo/src/main/java/com/example/demo/config/SecurityConfig.java)
