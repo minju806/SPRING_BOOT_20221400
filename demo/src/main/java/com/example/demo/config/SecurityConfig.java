@@ -7,9 +7,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 
 @Configuration // 스프링 설정 클래스 등록
 @EnableWebSecurity // 스프링 시큐리티 활성화
+@EnableMethodSecurity // [6주차] 메서드 보안 활성화 : @PreAuthorize 사용
 public class SecurityConfig {
 
     @Bean // 비밀번호 암호화 객체 등록 (BCrypt 해시)
@@ -24,7 +26,9 @@ public class SecurityConfig {
                 .requestMatchers("/", "/hello", "/detailed_web.html",
                         "/login", "/signup", "/error").permitAll()
                 .requestMatchers("/css/**", "/js/**", "/images/**", "/fonts/**").permitAll()
-                .anyRequest().authenticated())
+                .requestMatchers("/admin/**").hasRole("ADMIN") // [6주차] 관리자만
+                .requestMatchers("/testdb").hasAnyRole("ADMIN", "MANAGER") // [연습②]
+                .anyRequest().authenticated()) // 나머지 : 로그인 필요
             .formLogin(form -> form // 2. 폼 로그인 설정 (인증)
                 .loginPage("/login")
                 .defaultSuccessUrl("/")

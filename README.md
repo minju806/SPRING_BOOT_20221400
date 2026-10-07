@@ -11,3 +11,6 @@
 
 5주차 - 로그인/로그아웃, 암호화 완료
 [SecurityConfig.java : 실행/수정 완료](https://github.com/minju806/SPRING_BOOT_20221400/blob/main/demo/src/main/java/com/example/demo/config/SecurityConfig.java)
+
+6주차 - 권한(ROLE) 접근 제어, 관리자 페이지 분리 완료
+[AdminController.java : 실행/수정 완료](https://github.com/minju806/SPRING_BOOT_20221400/blob/main/demo/src/main/java/com/example/demo/controller/AdminController.java)
