@@ -14,3 +14,6 @@
 
 6주차 - 권한(ROLE) 접근 제어, 관리자 페이지 분리 완료
 [AdminController.java : 실행/수정 완료](https://github.com/minju806/SPRING_BOOT_20221400/blob/main/demo/src/main/java/com/example/demo/controller/AdminController.java)
+
+7주차 - 회원 관리 REST API(JSON) 완료
+[AdminApiController.java : 실행/수정 완료](https://github.com/minju806/SPRING_BOOT_20221400/blob/main/demo/src/main/java/com/example/demo/controller/AdminApiController.java)
