@@ -26,7 +26,8 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(auth -> auth // 1. URL 접근 규칙 (인가)
-                .requestMatchers("/", "/hello", "/detailed_web.html",
+                .requestMatchers("/", "/hello", "/hello2", "/detailed_web.html",
+                        "/detailed_uiux.html", "/detailed_ai.html", "/detailed_quality.html",
                         "/login", "/signup", "/error").permitAll()
                 .requestMatchers("/css/**", "/js/**", "/images/**", "/fonts/**").permitAll()
                 .requestMatchers("/api/hello").permitAll() // [7주차] 첫 API : 누구나

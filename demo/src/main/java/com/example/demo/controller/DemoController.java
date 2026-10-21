@@ -20,6 +20,16 @@ public class DemoController {
         return "hello"; // hello.html 연결
     }
 
+    @GetMapping("/hello2") // 2주차 연습문제
+    public String hello2(Model model) {
+        model.addAttribute("name", "이민주");
+        model.addAttribute("major", "미디어소프트웨어");
+        model.addAttribute("grade", "4학년");
+        model.addAttribute("hobby", "개발");
+        model.addAttribute("goal", "졸업 작품 완성");
+        return "hello2";
+    }
+
     @GetMapping("/testdb")
     public String getAllTestDBs(Model model) {
         // TestDB test = testService.findByName("홍길동");
